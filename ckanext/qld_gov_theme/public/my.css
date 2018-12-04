@@ -1,6 +1,6 @@
 #qld-gov-header {
      background-size: 100%;
-     background-image: url("images/header-bg.jpg");
+     background-image: url("/header-bg.jpg");
 }
 
 .account-masthead {
@@ -19,3 +19,13 @@ body {
      background: #3a4249;
 }
 
+.footer-background {
+     background: #464f57;
+}
+
+.legal {
+     display: inline;
+     padding-right: 20px;
+}
+
+/*#464f57*/

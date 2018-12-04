@@ -31,9 +31,31 @@
     {% endblock %}
   </div>
 
+  
+
   {% block footer_debug %}
     {% if g.debug %}
       {% include 'snippets/debug.html' %}
     {% endif %}
   {% endblock %}
+</footer>
+
+<footer class="site-footer footer-background">
+  <div class="max-width"><div class="container">
+      <!-- <h2>Site footer</h2> -->
+      <ul class="list-footer" style="display: table; margin: 0 auto; padding-bottom: 1em;">
+        <li class="legal"><a href="http://www.qld.gov.au/legal/copyright/">Copyright</a></li>
+        <li class="legal"><a href="http://www.qld.gov.au/legal/disclaimer/">Disclaimer</a></li>
+        <li class="legal"><a href="http://www.qld.gov.au/legal/privacy/">Privacy</a></li>
+        <li class="legal"><a href="http://www.qld.gov.au/right-to-information/">Right to information</a></li>
+        <li class="legal"><a href="http://www.qld.gov.au/help/access/">Accessibility</a></li>
+        <li class="legal"><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
+        <li id="languages" class="legal"><a href="http://www.qld.gov.au/languages/">Other languages</a></li>
+      </ul>
+      <div class="container">
+        <p style="text-align: center;">&copy; The State of Queensland (agency name) 2010&ndash;2019</p>
+      <p style="text-align: center;"><a href="http://www.qld.gov.au/" accesskey="1">Queensland Government</a></p>
+      </div>
+      <div id="qg-branding"><p style="text-align: center; font-size: 1.5em; margin-left: 1em;"><img class="tagline" src="theme/qg-tagline-footer.png" alt="Great state. Great opportunity."></p></div>
+    </div></div>
 </footer>
