@@ -1,0 +1,21 @@
+#qld-gov-header {
+     background-size: 100%;
+     background-image: url("images/header-bg.jpg");
+}
+
+.account-masthead {
+     background: #3a4249;
+}
+
+.site-footer {
+     background: #3a4249;
+}
+
+.homepage .module-search .module-content {
+     background: #3a4249;
+}
+
+body {
+     background: #3a4249;
+}
+

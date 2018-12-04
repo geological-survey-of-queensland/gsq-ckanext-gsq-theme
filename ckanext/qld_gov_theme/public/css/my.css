@@ -1,0 +1,9 @@
+#qld-gov-header {
+     width:100%;
+     background-image:url("images/header-bg.jpg");
+}
+
+p {
+	color: red;
+	font-size: 30px;
+}
