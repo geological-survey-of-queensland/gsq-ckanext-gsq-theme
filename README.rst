@@ -36,6 +36,7 @@ ckanext-qld_gov_theme
    What does it do? What features does it have?
    Consider including some screenshots or embedding a video!
 
+Theme assets retrieved from ..
 
 ------------
 Requirements
