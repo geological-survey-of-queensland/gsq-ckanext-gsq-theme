@@ -15,11 +15,8 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
 
     # The permit route for header pill navigation button
     # Reference: https://stackoverflow.com/questions/17777191/how-to-add-a-menu-item-to-ckans-naivigation-menu
-    def before_map(self, m):
-    	m.connect(
-    		'permit_search',
-    		'',
-    		controller = 'ckanext.qld_gov_theme.controller:PermitController',
-    		action = 'permit'
-    	)
-    	return m
+    # def before_map(self, m):
+    # 	m.connect(
+    # 		'about'
+    # 	)
+    # 	return m
