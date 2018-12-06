@@ -45,6 +45,10 @@ Theme assets retrieved from https://www.forgov.qld.gov.au/cue-template-downloads
 Contact
 -------
 
+| **Edmond Chuc**
+| *Software engineer*
+| CSIRO Land and Water, Environmental Informatics Group
+| edmond.chuc@csiro.au
 
 
 
