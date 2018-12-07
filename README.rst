@@ -47,9 +47,8 @@ Contact
 
 | **Edmond Chuc**
 | *Software engineer*
-| CSIRO Land and Water, Environmental Informatics Group
 | edmond.chuc@csiro.au
-
+| CSIRO Land and Water, Environmental Informatics Group
 
 
 ------------
