@@ -41,6 +41,13 @@ ckanext-qld_gov_theme
 Theme assets retrieved from https://www.forgov.qld.gov.au/cue-template-downloads (CUE template 3.2 reference implementation).
 
 
+----
+todo
+
+- Add the pill nav button for borehole, seismic and gc.
+- Investigate the issue where if the user is on a page that is about "datasets", then all "dataset" pill nav buttons will be active. 
+
+
 -------
 Contact
 -------
