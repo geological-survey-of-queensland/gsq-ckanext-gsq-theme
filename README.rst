@@ -1,36 +1,8 @@
-.. You should enable this project on travis-ci.org and coveralls.io to make
-   these badges work. The necessary Travis and Coverage config files have been
-   generated for you.
 
-.. image:: https://travis-ci.org/edmondchuc/ckanext-qld_gov_theme.svg?branch=master
-    :target: https://travis-ci.org/edmondchuc/ckanext-qld_gov_theme
 
-.. image:: https://coveralls.io/repos/edmondchuc/ckanext-qld_gov_theme/badge.svg
-  :target: https://coveralls.io/r/edmondchuc/ckanext-qld_gov_theme
-
-.. image:: https://pypip.in/download/ckanext-qld_gov_theme/badge.svg
-    :target: https://pypi.python.org/pypi//ckanext-qld_gov_theme/
-    :alt: Downloads
-
-.. image:: https://pypip.in/version/ckanext-qld_gov_theme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-qld_gov_theme/
-    :alt: Latest Version
-
-.. image:: https://pypip.in/py_versions/ckanext-qld_gov_theme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-qld_gov_theme/
-    :alt: Supported Python versions
-
-.. image:: https://pypip.in/status/ckanext-qld_gov_theme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-qld_gov_theme/
-    :alt: Development Status
-
-.. image:: https://pypip.in/license/ckanext-qld_gov_theme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-qld_gov_theme/
-    :alt: License
-
-=============
+=====================
 ckanext-qld_gov_theme
-=============
+=====================
 
 .. Put a description of your extension here:
    What does it do? What features does it have?
