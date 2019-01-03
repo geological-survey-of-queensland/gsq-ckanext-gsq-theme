@@ -17,6 +17,10 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
     # Reference: https://stackoverflow.com/questions/17777191/how-to-add-a-menu-item-to-ckans-naivigation-menu
     # def before_map(self, m):
     # 	m.connect(
-    # 		'about'
+    # 		'dataset',
+    # 		'/dataset',
+    # 		controller='ckanext.qld_gov_theme.controller:NewDatasetController',
+    # 		action='dataset'
     # 	)
+    # 	# return toolkit.url_for('http://www.google.com')
     # 	return m

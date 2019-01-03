@@ -89,11 +89,17 @@
       {% block header_site_navigation %}
       <nav class="section navigation">
         <ul class="nav nav-pills">
+          <li class="">
+           <a href="/dataset?tags=seismic&tags=geological chemical">Datasets</a>
+          </li>
+          <li class="">
+           <a href="/permit">Permits</a>
+          </li>
+          <li class="">
+           <a href="/borehole">Boreholes</a>
+          </li>
           {% block header_site_navigation_tabs %} 
           {{ h.build_nav_main( 
-            ('search', _('Datasets')), 
-            ('permit_search', _('Permits')),
-            ('borehole_search', _('Boreholes')),
             ('organizations_index', _('Organizations')),
             ('group_index', _('Groups')), 
             ('home.about', _('About')) 
