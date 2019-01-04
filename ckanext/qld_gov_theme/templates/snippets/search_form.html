@@ -9,7 +9,7 @@
 <form {% if form_id %}id="{{ form_id }}" {% endif %}class="search-form{% if no_bottom_border %} no-bottom-border{% endif %}" method="get" data-module="select-switch">
   {% set dataset_type = placeholder[7:-4] %}
   {% if dataset_type == "dataset" %}
-    {% set placeholder = "Search seismic or geological chemicals..." %}
+    {% set placeholder = "Search for seismic or geochemistry datasets..." %}
   {% endif %}
 
   {% block search_input %}
@@ -18,8 +18,8 @@
       {% if dataset_type != 'dataset' %}
         <input type="hidden" name="tags" value="{{ dataset_type }}">
       {% else %}
-        <input type="hidden" name="tags" value="seismic">
-        <input type="hidden" name="tags" value="geological chemical">
+        <!-- <input type="hidden" name="tags" value="seismic">
+        <input type="hidden" name="tags" value="geochemistry"> -->
       {% endif %}
       {% block search_input_button %}
       <span class="input-group-btn">
