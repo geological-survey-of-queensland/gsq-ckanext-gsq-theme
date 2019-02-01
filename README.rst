@@ -1,23 +1,10 @@
-
-
 =====================
 ckanext-qld_gov_theme
 =====================
 
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
-
 *A CKAN extension to apply a custom Qld Gov theme.*
 
 Theme assets retrieved from https://www.forgov.qld.gov.au/cue-template-downloads (CUE template 3.2 reference implementation).
-
-
-----
-todo
-----
-
-- 
 
 
 -------
