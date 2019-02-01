@@ -9,7 +9,7 @@
               <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
             {% endblock %}
           </ul>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled" style="display:inline; padding-right:20px;">
             {% block footer_links_ckan %}
               {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
               <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
@@ -22,9 +22,6 @@
       <div class="col-md-4 attribution">
         {% block footer_attribution %}
           <p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}</p>
-        {% endblock %}
-        {% block footer_lang %}
-          {% snippet "snippets/language_selector.html" %}
         {% endblock %}
       </div>
     </div>
@@ -53,7 +50,7 @@
         <li id="languages" class="legal"><a href="http://www.qld.gov.au/languages/">Other languages</a></li>
       </ul>
       <div class="container">
-        <p style="text-align: center;">&copy; The State of Queensland (agency name) 2010&ndash;2019</p>
+        <p style="text-align: center;">&copy; The State of Queensland (Department of Natural Resources, Mines &amp; Energy) 2019</p>
       <p style="text-align: center;"><a href="http://www.qld.gov.au/" accesskey="1">Queensland Government</a></p>
       </div>
       <div id="qg-branding"><p style="text-align: center; font-size: 1.5em; margin-left: 1em;"><img class="tagline" src="theme/qg-tagline-footer.png" alt="Great state. Great opportunity."></p></div>
