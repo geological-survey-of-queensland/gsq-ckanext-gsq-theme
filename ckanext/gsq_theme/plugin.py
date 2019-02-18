@@ -16,7 +16,7 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
 
     def before_search(self, data_dict):
         """Create a UNION of the search results containing the desired tags."""
-    	if 'seismic' and 'geochemistry' and 'dataset' in data_dict['fq']:
+    	if 'seismic' and 'geochemistry' in data_dict['fq']:
 	    	fix = "tags:(seismic OR geochemistry OR dataset)"
 	    	data_dict['fq'] = fix
     	return data_dict
