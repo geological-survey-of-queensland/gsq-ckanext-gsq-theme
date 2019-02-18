@@ -93,7 +93,7 @@
     
   </div>
 </header>
-<header class="collapse navbar-collapse" id="main-navigation-toggle" style="background: #aa3b28; z-index: 1; padding-top: 20px;">
+<header class="collapse navbar-collapse" id="main-navigation-toggle" style="background: #aa3b28; z-index: 1; padding-top: 10px;">
   <div class="navbar navbar-static-top masthead" style="background: #aa3b28;">
     <div class="container">
       {% block header_site_navigation %}
@@ -114,6 +114,13 @@
           <li class="">
            <a href="/borehole">Boreholes</a>
           </li>
+          <li class="">
+            <a href="/organization">Organizations</a>
+          </li>
+          <li class="">
+            <a href="/about">About</a>
+          </li>
+          {# COMMENTED OUT
           {% block header_site_navigation_tabs %} 
           {{ h.build_nav_main( 
             ('organizations_index', _('Organizations')),
@@ -121,6 +128,7 @@
             ('home.about', _('About')) 
             ) }} 
           {% endblock %}
+          #}
         </ul>
       </nav>
       {% endblock %} {% block header_site_search %}
