@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='''ckanext-qld_gov_theme''',
+    name='''ckanext-gsq_theme''',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
@@ -80,7 +80,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        qld_gov_theme=ckanext.qld_gov_theme.plugin:Qld_Gov_ThemePlugin
+        gsq_theme=ckanext.gsq_theme.plugin:Qld_Gov_ThemePlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
