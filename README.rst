@@ -1,10 +1,10 @@
 =====================
-ckanext-qld_gov_theme
+ckanext-gsq_theme
 =====================
 
-*A CKAN extension to apply a custom Qld Gov theme.*
+*A CKAN extension to apply a custom Geological Survey of Qld (GSQ) theme.*
 
-Theme assets retrieved from https://www.forgov.qld.gov.au/cue-template-downloads (CUE template 3.2 reference implementation).
+Theme assets retrieved from https://www.dnrme.qld.gov.au/home/about-us/support-assistance/natural-disasters website.
 
 
 -------
@@ -32,17 +32,17 @@ Installation
    For example installing any non-Python dependencies or adding any required
    config settings.
 
-To install ckanext-qld_gov_theme:
+To install ckanext-gsq_theme:
 
 1. Activate your CKAN virtual environment, for example::
 
      . /usr/lib/ckan/default/bin/activate
 
-2. Install the ckanext-qld_gov_theme Python package into your virtual environment::
+2. Install the ckanext-gsq_theme Python package into your virtual environment::
 
-     pip install ckanext-qld_gov_theme
+     pip install ckanext-gsq_theme
 
-3. Add ``qld_gov_theme`` to the ``ckan.plugins`` setting in your CKAN
+3. Add ``gsq_theme`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
    ``/etc/ckan/default/production.ini``).
 
@@ -59,18 +59,18 @@ Document any optional config settings here. For example::
 
     # The minimum number of hours to wait before re-checking a resource
     # (optional, default: 24).
-    ckanext.qld_gov_theme.some_setting = some_default_value
+    ckanext.gsq_theme.some_setting = some_default_value
 
 
 ------------------------
 Development Installation
 ------------------------
 
-To install ckanext-qld_gov_theme for development, activate your CKAN virtualenv and
+To install ckanext-gsq_theme for development, activate your CKAN virtualenv and
 do::
 
-    git clone https://github.com/edmondchuc/ckanext-qld_gov_theme.git
-    cd ckanext-qld_gov_theme
+    git clone https://github.com/edmondchuc/ckanext-gsq_theme.git
+    cd ckanext-gsq_theme
     python setup.py develop
     pip install -r dev-requirements.txt
 
@@ -86,15 +86,15 @@ To run the tests, do::
 To run the tests and produce a coverage report, first make sure you have
 coverage installed in your virtualenv (``pip install coverage``) then run::
 
-    nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.qld_gov_theme --cover-inclusive --cover-erase --cover-tests
+    nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.gsq_theme --cover-inclusive --cover-erase --cover-tests
 
 
 ---------------------------------
-Registering ckanext-qld_gov_theme on PyPI
+Registering ckanext-gsq_theme on PyPI
 ---------------------------------
 
-ckanext-qld_gov_theme should be availabe on PyPI as
-https://pypi.python.org/pypi/ckanext-qld_gov_theme. If that link doesn't work, then
+ckanext-gsq_theme should be availabe on PyPI as
+https://pypi.python.org/pypi/ckanext-gsq_theme. If that link doesn't work, then
 you can register the project on PyPI for the first time by following these
 steps:
 
@@ -119,10 +119,10 @@ steps:
 
 
 ----------------------------------------
-Releasing a New Version of ckanext-qld_gov_theme
+Releasing a New Version of ckanext-gsq_theme
 ----------------------------------------
 
-ckanext-qld_gov_theme is availabe on PyPI as https://pypi.python.org/pypi/ckanext-qld_gov_theme.
+ckanext-gsq_theme is availabe on PyPI as https://pypi.python.org/pypi/ckanext-gsq_theme.
 To publish a new version to PyPI follow these steps:
 
 1. Update the version number in the ``setup.py`` file.
