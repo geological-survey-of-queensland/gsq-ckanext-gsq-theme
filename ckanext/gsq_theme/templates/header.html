@@ -64,7 +64,7 @@
 </header>
 {% endblock %}
 
-<header id="qld-gov-header" class="navbar navbar-static-top masthead">
+<header id="qld-gov-header" class="navbar navbar-static-top masthead" style="background: linear-gradient(112deg, #327085 0%, #327085 50%, #134758 50%, #134758 100%); box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); color: #fff; z-index: 2; border: none;">
   {% block header_debug %} {% if g.debug and not g.debug_supress_header %}
   <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
   {% endif %} {% endblock %}
@@ -76,7 +76,12 @@
     </div>
     <hgroup class="{{ g.header_class }} navbar-left">
       {% block header_logo %} {% if g.site_logo %}
-      <a class="logo" href="{{ h.url_for('home.index') }}"><img src="/qg-coa.png" width="287" height="50" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+      <div>
+        <a style="padding-bottom: 15px;" class="logo" href="{{ h.url_for('home.index') }}"><img src="/qg-coa.png" width="287" height="50" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a><br>
+        <p style="float: right; font-size: 18px; margin-bottom: 0px;">
+          <a style="text-decoration: none;" href="https://www.dnrme.qld.gov.au/home">Department of <strong>Natural Resources, Mines and Energy</strong></a>
+        </p>
+      </div>  
       {% else %}
       <h1>
         <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
@@ -85,7 +90,12 @@
       <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
     </hgroup>
 
-    <div class="collapse navbar-collapse" id="main-navigation-toggle">
+    
+  </div>
+</header>
+<header class="" id="main-navigation-toggle" style="width: 100%;">
+  <div class="navbar navbar-static-top masthead" style="background: #aa3b28; z-index: 1; padding-top: 20px;">
+    <div class="container">
       {% block header_site_navigation %}
       <nav class="section navigation">
         <ul class="nav nav-pills">
@@ -108,7 +118,7 @@
         </ul>
       </nav>
       {% endblock %} {% block header_site_search %}
-      <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
+      <form style="float:right;" class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
         <div class="field">
           <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
           <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}" />
@@ -116,7 +126,7 @@
         </div>
       </form>
       {% endblock %}
-    </div>
+    </div>  
   </div>
 </header>
 {% endblock %}

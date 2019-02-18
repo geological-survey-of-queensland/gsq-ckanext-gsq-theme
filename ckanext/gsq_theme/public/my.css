@@ -29,3 +29,151 @@ body {
 }
 
 /*#464f57*/
+
+
+.footer-connect {
+  padding: 20px 0;
+  background: #327085;
+  color: white; }
+  .footer-connect .flex {
+    display: flex;
+    justify-content: space-around; }
+    .footer-connect .flex > div {
+      width: 30%;
+      display: flex;
+      align-items: center; }
+    .footer-connect .flex ul {
+      list-style: none; }
+    .footer-connect .flex a:link,
+    .footer-connect .flex a:active,
+    .footer-connect .flex a:visited {
+      color: #fff;
+      text-decoration: none; }
+    .footer-connect .flex a:focus,
+    .footer-connect .flex a:hover {
+      outline: none;
+      text-decoration: underline; }
+  .footer-connect .feedback p {
+    padding-right: 20px;
+    position: relative; }
+    .footer-connect .feedback p::before, .footer-connect .feedback p::after {
+      display: block;
+      position: absolute;
+      right: 0;
+      content: '';
+      width: 12px;
+      height: 4px;
+      border-radius: 3px;
+      background: #fff;
+      transition: all .3s ease; }
+    .footer-connect .feedback p::before {
+      top: 7px;
+      transform: rotate(45deg); }
+    .footer-connect .feedback p::after {
+      top: 13px;
+      transform: rotate(-45deg); }
+    .footer-connect .feedback p.open::before {
+      top: 10px;
+      transform: rotate(-45deg);
+      right: -6px; }
+    .footer-connect .feedback p.open::after {
+      top: 10px;
+      transform: rotate(45deg); }
+    .footer-connect .feedback p:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+  .footer-connect .share p {
+    margin-right: 20px; }
+  .footer-connect .share svg {
+    height: 30px;
+    width: 37px;
+    fill: #fff;
+    opacity: .8;
+    transition: opacity .2s ease; }
+  .footer-connect .share a:focus svg,
+  .footer-connect .share a:hover svg {
+    opacity: 1; }
+
+.inner {
+  width: 95%;
+  max-width: 125rem;
+  margin: 0 auto; }
+
+.footer-content {
+  padding: 20px 0;
+  background: #134758;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px; }
+  .footer-content ul {
+    list-style: none; }
+  .footer-content .flex {
+    display: flex;
+    justify-content: space-around; }
+    .footer-content .flex > div {
+      width: 30%; }
+  .footer-content h3 {
+    padding: 10px 0;
+    border-bottom: 1px solid #327085;
+    font-size: 20px;
+    font-weight: 400; }
+  .footer-content .about-us ul {
+    display: flex;
+    flex-wrap: wrap; }
+  .footer-content .about-us li {
+    width: 50%; }
+  .footer-content a:link,
+  .footer-content a:active,
+  .footer-content a:visited {
+    padding: 15px 0;
+    display: block;
+    color: #fff;
+    text-decoration: none; }
+  .footer-content a:focus,
+  .footer-content a:hover {
+    outline: none;
+    text-decoration: underline; }
+
+footer ul {
+  list-style: none; }
+
+footer .links {
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 21px; }
+  footer .links ul {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  footer .links li.find-contacts {
+    cursor: pointer; }
+    footer .links li.find-contacts:hover {
+      text-decoration: underline; }
+  footer .links li:not(:last-child)::after {
+    content: '|';
+    margin: 0 10px;
+    display: inline-block; }
+  footer .links a:link,
+  footer .links a:active,
+  footer .links a:visited {
+    text-decoration: none;
+    color: #000; }
+  footer .links a:focus,
+  footer .links a:hover {
+    text-decoration: underline; }
+
+footer .copyright {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 16px; 
+  color: black;
+}
+
+footer {
+	color: black;
+	background-color: white;
+}
