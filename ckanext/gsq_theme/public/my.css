@@ -177,3 +177,16 @@ footer {
 	color: black;
 	background-color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  .footer-content .flex {
+    flex-wrap: wrap; }
+    .footer-content .flex > div {
+      width: 100%; } }
+
+@media only screen and (max-width: 768px) {
+  .footer-connect .flex {
+    flex-wrap: wrap;
+    text-align: center; }
+    .footer-connect .flex > div {
+      width: 100%; } }
