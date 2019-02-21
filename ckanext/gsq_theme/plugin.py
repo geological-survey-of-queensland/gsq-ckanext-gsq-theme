@@ -31,9 +31,9 @@ def get_dataset_rdf_name(default=False, id=None):
         dataset_type = toolkit.get_action('package_show')(None, {'id': dataset_name})['type']
     
     if default:
-        display_name = 'gsq_' + 'dataset' + '.ttl'
+        display_name = 'dcat_' + 'dataset' + '_profile' + '.ttl'
     else:
-        display_name = 'gsq_' + dataset_type + '.ttl'
+        display_name = 'gsq_' + dataset_type + '_profile' + '.ttl'
 
     return display_name
 
