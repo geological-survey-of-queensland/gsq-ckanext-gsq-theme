@@ -1,11 +1,56 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckantoolkit import config
+from ckan.lib import helpers
+import inspect
+
+
+def get_dataset_rdf_url(default=False):
+    url = toolkit.request.url
+    url = url.split('?')[0]
+    dataset_name = url.split('/')[-1]
+    dataset_type = toolkit.get_action('package_show')(None, {'id': dataset_name})['type']
+
+    uri = config.get('ckanext.dcat.base_uri')
+    if not uri:
+        uri = config.get('ckan.site_url')
+
+    if default:
+        return uri + '/' + 'dataset' + '/' + dataset_name + '.ttl?profiles=gsq_dataset'
+    else:
+        return uri + '/' + 'dataset' + '/' + dataset_name + '.ttl?profiles=gsq_' + dataset_type + ',gsq_dataset'
+
+
+def get_dataset_rdf_name(default=False, id=None):
+    if id:
+        dataset_type = toolkit.get_action('package_show')(None, {'id': id})['type']
+    else:
+        url = toolkit.request.url
+        url = url.split('?')[0]
+        dataset_name = url.split('/')[-1]
+        dataset_type = toolkit.get_action('package_show')(None, {'id': dataset_name})['type']
+    
+    if default:
+        display_name = 'gsq_' + 'dataset' + '.ttl'
+    else:
+        display_name = 'gsq_' + dataset_type + '.ttl'
+
+    return display_name
+
+
+def get_dataset_type():
+    url = toolkit.request.url
+    url = url.split('?')[0]
+    dataset_name = url.split('/')[-1]
+    return toolkit.get_action('package_show')(None, {'id': dataset_name})['type']
+
 
 
 class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers)
 
     # IConfigurer
 
@@ -13,6 +58,13 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic', 'qld_gov_theme')
+
+    def get_helpers(self):
+        return {
+            'get_rdf_url': get_dataset_rdf_url,
+            'get_rdf_name': get_dataset_rdf_name,
+            'get_type': get_dataset_type,
+        }
 
     def before_search(self, data_dict):
         """Create a UNION of the search results containing the desired tags."""
