@@ -1,5 +1,11 @@
 <section class="additional-info">
-  <h3>{{ _('Additional Info') }}</h3>
+  <h3>{{ _('Additional Info') }} 
+    {% if h.get_type() == 'dataset' %}
+      <span style="font-size: 12px; float: right; padding-right: 10px;"><a href=" {{h.get_rdf_url(default=True) }}">{{ h.get_rdf_name(default=True) }}</a></span>
+    {% else %}
+      <span style="font-size: 12px; float: right;"><a href=" {{h.get_rdf_url() }}">{{ h.get_rdf_name() }}</a></span> <span style="font-size: 12px; float: right; padding-right: 10px;"><a href=" {{h.get_rdf_url(default=True) }}">{{ h.get_rdf_name(default=True) }}</a></span>
+    {% endif %}
+    </h3>
   <table class="table table-striped table-bordered table-condensed">
     <thead>
       <tr>
