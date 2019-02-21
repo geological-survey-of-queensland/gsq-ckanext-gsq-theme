@@ -68,9 +68,26 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
 
     def before_search(self, data_dict):
         """Create a UNION of the search results containing the desired tags."""
-    	if 'seismic' and 'geochemistry' in data_dict['fq']:
-	    	fix = "tags:(seismic OR geochemistry OR dataset)"
-	    	data_dict['fq'] = fix
+        args = data_dict['fq'].split(' ')
+        tags = []
+        for arg in args:
+            if 'tags:' in arg and 'seismic' in arg:
+                tags.append('seismic')
+            if 'tags:' in arg and 'geochemistry' in arg:
+                tags.append('geochemistry')
+            if 'tags:' in arg and 'dataset' in arg:
+                tags.append('dataset')
+        
+        if tags:
+            fix = 'tags:('
+            for i, tag in enumerate(tags):
+                if i > 0:
+                    fix += ' OR '
+                fix += tag
+            
+            fix += ')'
+            data_dict['fq'] = fix
+
     	return data_dict
 
     # The permit route for header pill navigation button
