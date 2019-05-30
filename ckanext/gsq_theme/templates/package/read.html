@@ -45,4 +45,12 @@
     {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
   {% endblock %}
 
+  {# Spatial extension #}
+  {% set dataset_extent = c.pkg_dict.get('GeoJSONextent','') %}
+
+  {% if dataset_extent %}
+    {% snippet "spatial/snippets/dataset_map.html", extent=dataset_extent %}
+  {% endif %}
+
+
 {% endblock %}
