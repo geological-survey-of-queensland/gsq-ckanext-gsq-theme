@@ -53,7 +53,7 @@
       <!-- <link rel="shortcut icon" href="{{ g.favicon }}" /> -->
       <link rel="shortcut icon" type="image/png" href="https://static.qgov.net.au/assets/v2/images/skin/favicon.ico">
     {% endblock -%}
-
+    
     {#
     The styles block allows you to add additonal stylesheets to the page in
     the same way as the meta block. Use super() to include the default
@@ -77,6 +77,7 @@
     #}
     {%- block styles %}
       {% resource g.main_css[6:] %}
+       <link href="/my.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block head_extras %}
