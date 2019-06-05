@@ -27,9 +27,6 @@ background: #3a4249;
  background-repeat: no-repeat; /*repeat-x*/
   background-size: cover;
   background-position: center center;  
-
-
-
 }
 }
 .hero:after {
@@ -50,7 +47,9 @@ background: #3a4249;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.03);
 }
 
-
+.toolbar .breadcrumb a {
+    color: white;
+}
 
 .footer-background {
      background: #464f57;
