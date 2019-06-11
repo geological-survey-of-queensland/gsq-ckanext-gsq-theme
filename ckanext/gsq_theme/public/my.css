@@ -21,6 +21,26 @@ background: #3a4249;
 
 }
 
+
+.label[tag=Seismic],
+.label[tag*=Seismic] {
+  background-color: #0077ff;
+}
+
+.label[tag=Geochemistry],
+.label[tag*=Geochemistry] {
+  background-color: #ff8c00;
+}
+
+.label[data-format=shp],
+.label[data-format*=shp] {
+  background-color: #76cc00;
+}
+.label[data-format=tab],
+.label[data-format*=tab] {
+  background-color: #6d5da3;
+}
+
 @media (min-width: 480px) {
   .hero, [role=main] {
     background-image: url("/Queensland_Globe.jpg");
