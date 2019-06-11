@@ -3,6 +3,9 @@ import ckan.plugins.toolkit as toolkit
 from ckantoolkit import config
 from ckan.lib import helpers
 import inspect
+from logging import getLogger
+
+log = getLogger(__name__)
 
 # Changed to remove dependency on ckanext-dcat
 def get_dataset_rdf_url(default=False):
@@ -51,6 +54,7 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IFacets, inherit=True)
 
     # IConfigurer
 
@@ -65,6 +69,17 @@ class Qld_Gov_ThemePlugin(plugins.SingletonPlugin):
             'get_rdf_name': get_dataset_rdf_name,
             'get_type': get_dataset_type,
         }
+
+    def dataset_facets(self, facets_dict, package_type):
+        # del facets_dict['organizations']
+        #log.debug(facets_dict)        
+        # dict contains OrderedDict([(u'organization', u'Organizations'), 
+        #     (u'groups', u'Groups'), (u'tags', u'Tags'), 
+        #     (u'res_format', u'Formats'), (u'license_id', u'Licenses')])
+        del facets_dict['organization']
+        del facets_dict['groups']
+        del facets_dict['license_id']        
+        return facets_dict
 
 # def before_search(self, data_dict):
 #         """Create a UNION of the search results containing the desired tags."""
