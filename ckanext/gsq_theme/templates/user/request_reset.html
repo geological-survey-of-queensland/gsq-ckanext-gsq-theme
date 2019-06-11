@@ -11,7 +11,10 @@
     <div class="module-content">
       {% block primary_content_inner %}
       <h1 class="page-heading">{{ _('Reset your password') }}</h1>
-      {% block form %}
+      
+      <p>Please email Support to request a password reset.</p>   
+{#
+{% block form %}
         <form action="" method="post">
           <div class="form-group">
             <label for="field-username">{{ _('Username') }}</label>
@@ -24,7 +27,9 @@
           </div>
         </form>
       {% endblock %}
+#}
       {% endblock %}
+
     </div>
   </article>
 {% endblock %}
@@ -35,8 +40,7 @@
     {% block help_inner %}
     <h2 class="module-heading">{{ _('How does this work?') }}</h2>
     <div class="module-content">
-      <p>{% trans %}Enter your username into the box and we will send you
-      an email with a link to enter a new password.{% endtrans %}</p>
+      <p>{% trans %}This feature is coming soon.{% endtrans %}</p>
     </div>
     {% endblock %}
   </section>
