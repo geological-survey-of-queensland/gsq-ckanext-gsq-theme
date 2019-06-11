@@ -71,6 +71,7 @@ background: #3a4249;
 
 .toolbar .breadcrumb a {
     color: white;
+    text-shadow: black 0px 0px 5px;
 }
 
 .footer-background {
