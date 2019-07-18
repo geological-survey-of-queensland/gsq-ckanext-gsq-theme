@@ -38,10 +38,12 @@
                     <i class="fa fa-eye"></i> {{ _('View') }}
                   {% elif  res.resource_type == 'api' %}
                     <i class="fa fa-key"></i> {{ _('API Endpoint') }}
+                  {# Show S3 links as downloads
                   {% elif (not res.has_views or not res.can_be_previewed) and not res.url_type == 'upload' %}
                     <i class="fa fa-external-link"></i> {{ _('Go to resource') }}
+                  #}
                   {% else %}
-                    <i class="fa fa-arrow-circle-o-down"></i> {{ _('Download') }}
+                    <i class="fa fa-arrow-circle-o-down"></i> {{ _('Download (' + res['resource:size'] + ')') }}
                   {% endif %}
                 </a>
                  {% block download_resource_button %}
