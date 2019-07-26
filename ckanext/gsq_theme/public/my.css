@@ -41,14 +41,18 @@ background: #3a4249;
   background-color: #6d5da3;
 }
 
-@media (min-width: 480px) {
   .hero, [role=main] {
-    background-image: url("/Queensland_Globe.jpg");
+    background-image: none /*url("/Queensland_Globe.jpg")*/;
   background-repeat: no-repeat; /*repeat-x*/
   background-size: cover;
   background-position: center center;  
   background-attachment: fixed;
-
+  
+  /* make everything greyscale 
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+  filter: grayscale(100%); */
 }
 }
 .hero:after {
