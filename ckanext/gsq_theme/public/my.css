@@ -42,12 +42,13 @@ background: #3a4249;
 }
 
   .hero, [role=main] {
-    background-image: none /*url("/Queensland_Globe.jpg")*/;
-  background-repeat: no-repeat; /*repeat-x*/
-  background-size: cover;
+  /*  background-image: none /*url("/Queensland_Globe.jpg")*/;
+  /*  background-repeat: no-repeat; /*repeat-x*/
+  /* background-size: cover;
   background-position: center center;  
   background-attachment: fixed;
-  
+  */
+
   /* make everything greyscale 
   -webkit-filter: grayscale(1);
   -webkit-filter: grayscale(100%);
