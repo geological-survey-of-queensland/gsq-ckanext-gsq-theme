@@ -7,7 +7,6 @@ from logging import getLogger
 
 log = getLogger(__name__)
 
-# Changed to remove dependency on ckanext-dcat
 def get_dataset_rdf_url(default=False):
     url = toolkit.request.url
     url = url.split('?')[0]
@@ -19,11 +18,10 @@ def get_dataset_rdf_url(default=False):
         uri = config.get('ckan.site_url')
 
     if default:
-        return uri + '/' + 'dataset' + '/' + dataset_name # + '.ttl?profiles=gsq_dataset'
+        return uri + '/' + 'dataset' + '/' + dataset_name + '.ttl' #?profiles=gsq_dataset'
     else:
-        return uri + '/' + 'dataset' + '/' + dataset_name # + '.ttl?profiles=gsq_' + dataset_type + ',gsq_dataset'
+        return uri + '/' + 'dataset' + '/' + dataset_name + '.ttl' #?profiles=gsq_' + dataset_type + ',gsq_dataset'
 
-# Changed to remove dependency on ckanext-dcat
 def get_dataset_rdf_name(default=False, id=None):
     if id:
         dataset_type = toolkit.get_action('package_show')(None, {'id': id})['type']
@@ -37,8 +35,7 @@ def get_dataset_rdf_name(default=False, id=None):
         display_name = 'dcat_' + 'dataset' + '_profile' + '.ttl'
     else:
         display_name = 'gsq_' + dataset_type + '_profile' + '.ttl'
-    # Return blank string so no TTL link appears in the dataset page
-    return '' # display_name
+    return display_name
 
 
 def get_dataset_type():
